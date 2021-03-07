@@ -1,7 +1,7 @@
 class FileManager:
     @staticmethod
     def save_output(input_text: str, start_position: int, end_position: int):
-        with open('../text_files/output.txt', 'w', encoding='utf8') as arq_output:
+        with open('../text_files/output.txt', 'a', encoding='utf8') as arq_output:
             arq_output.write(''.join(filter(lambda lista: lista[0] != '\n', input_text[start_position:end_position])))
 
     @staticmethod
